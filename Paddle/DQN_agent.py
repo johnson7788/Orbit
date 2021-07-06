@@ -84,12 +84,17 @@ def train_dqn(episode):
 
     agent = DQN(action_space, state_space)
     for e in range(episode):
+        # 状态的5个维度，分别是球拍的x，球的水平x，y，垂直的x,y
         state = env.reset()
+        # 维度变成 [1,5]
         state = np.reshape(state, (1, state_space))
         score = 0
         for i in range(max_steps):
+            # 根据状态，模型输一个一个动作
             action = agent.act(state)
+            # 执行这个动作，返回奖励和下一个状态
             reward, next_state, done = env.step(action)
+            # 累积奖励
             score += reward
             next_state = np.reshape(next_state, (1, state_space))
             agent.remember(state, action, reward, next_state, done)

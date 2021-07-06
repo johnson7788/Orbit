@@ -72,7 +72,10 @@ class Paddle():
             self.paddle.setx(x-20)
 
     def run_frame(self):
-
+        """
+        更新一帧
+        Returns:
+        """
         self.win.update()
 
         # Ball moving
