@@ -14,7 +14,7 @@ Orbit contains following RL environments as of today.
 
 ---
 
-# Environment 1: Paddle
+# Environment 1: Paddle,乒乓球
 
 ### Author: [Shiva Verma](https://www.linkedin.com/in/shiva-verma/)
 

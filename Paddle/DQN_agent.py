@@ -103,7 +103,7 @@ def train_dqn(episode):
 
 
 if __name__ == '__main__':
-
+    #训练 100个episode
     ep = 100
     loss = train_dqn(ep)
     plt.plot([i for i in range(ep)], loss)
